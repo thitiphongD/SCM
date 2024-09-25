@@ -8,7 +8,7 @@ const StudentPage: React.FunctionComponent = () => {
     <div className="flex flex-col md:flex-row p-4 gap-4">
       <div className="w-full xl:w-2/3">
         <div className="bg-white h-full p-4 rounded-md">
-          <h1>Schedule (4A)</h1>
+          <h1 className="text-xl font-semibold">Schedule (4A)</h1>
           <BigCalendar />
         </div>
       </div>
