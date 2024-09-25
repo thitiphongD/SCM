@@ -17,3 +17,22 @@
 .menu-link {
   @apply flex items-center justify-center lg:justify-start py-2 text-gray-700 gap-3;
 }
+
+.navbar-con {
+  @apply flex items-center justify-between p-4;
+}
+
+.navbar-item {
+  @apply bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer;
+}
+
+.navbar-input {
+  @apply hidden md:flex items-center gap-2 text-xs rounded-full ring-[1.5px] ring-gray-200 px-2;
+  input {
+    @apply w-[200px] p-2 bg-transparent outline-none;
+  }
+}
+
+.notification-number {
+  @apply absolute -top-3 -right-3 w-5 h-5 flex items-center rounded-e-full text-xs;
+}
