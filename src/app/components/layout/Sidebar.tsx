@@ -19,6 +19,7 @@ import {
   SubjectIcon,
   TeacherIcon,
 } from "../icon/MenuIcon";
+import { role } from "@/lib/data";
 
 const menuItems = [
   {
@@ -141,12 +142,16 @@ const Sidebar = () => {
       {menuItems.map((i) => (
         <div className="flex flex-col gap-2" key={i.title}>
           <span className="menu-title">{i.title}</span>
-          {i.items.map((item) => (
-            <Link href={item.href} key={item.label} className="menu-link">
-              <span>{item.icon}</span>
-              <span className="hidden lg:block">{item.label}</span>
-            </Link>
-          ))}
+          {i.items.map((item) => {
+            if (item.visible.includes(role)) {
+              return (
+                <Link href={item.href} key={item.label} className="menu-link">
+                  <span>{item.icon}</span>
+                  <span className="hidden lg:block">{item.label}</span>
+                </Link>
+              );
+            }
+          })}
         </div>
       ))}
     </div>
