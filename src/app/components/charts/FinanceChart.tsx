@@ -89,9 +89,9 @@ const FinanceChart = () => {
           data={data}
           margin={{
             top: 5,
-            right: 30,
+            right: 35,
             left: 20,
-            bottom: 5,
+            bottom: 20,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="#ddd" />

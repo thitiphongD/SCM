@@ -15,7 +15,7 @@
 }
 
 .menu-link {
-  @apply flex items-center justify-center lg:justify-start py-2 text-gray-700 gap-3;
+  @apply flex items-center justify-center lg:justify-start py-2 text-gray-700 gap-3 rounded-md hover:bg-[#5bd1ae] md:px-2;
 }
 
 .navbar-con {
