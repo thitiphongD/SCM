@@ -1,5 +1,6 @@
 import AttendanceChart from "@/app/components/charts/AttendanceChart";
 import CountChart from "@/app/components/charts/CountChart";
+import FinanceChart from "@/app/components/charts/FinanceChart";
 import UserCard from "@/app/components/UserCard";
 import React from "react";
 
@@ -20,6 +21,9 @@ const AdminPage: React.FunctionComponent = () => {
           <div className="w-full lg:w-[70%] h-[450px]">
             <AttendanceChart />
           </div>
+        </div>
+        <div className="w-full h-[500px]">
+          <FinanceChart />
         </div>
       </div>
       <div className="w-full lg:w-1/3">R</div>
