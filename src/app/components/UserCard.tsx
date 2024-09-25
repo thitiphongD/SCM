@@ -15,7 +15,7 @@ const UserCard: React.FC<Props> = ({ type }) => {
         <MoreIcon />
       </div>
       <h1 className="text-2xl font-semibold my-4 text-[#122740]">1234</h1>
-      <h2 className="capitalize text-sm font-medium text-gray-500">{type}</h2>
+      <h2 className="capitalize text-sm font-medium text-[#1b485e]">{type}</h2>
     </div>
   );
 };

@@ -1,12 +1,6 @@
 "use client";
 import React from "react";
-
-import {
-  RadialBarChart,
-  RadialBar,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
 import { MoreIcon, SexIcon } from "../icon/UtilIcon";
 
 const data = [
@@ -26,13 +20,6 @@ const data = [
     fill: "#1b485e",
   },
 ];
-
-const style = {
-  top: "50%",
-  right: 0,
-  transform: "translate(0, -50%)",
-  lineHeight: "24px",
-};
 
 const CountChart = () => {
   return (
