@@ -1,3 +1,4 @@
+import Announcements from "@/app/components/Announcements";
 import AttendanceChart from "@/app/components/charts/AttendanceChart";
 import CountChart from "@/app/components/charts/CountChart";
 import FinanceChart from "@/app/components/charts/FinanceChart";
@@ -29,6 +30,7 @@ const AdminPage: React.FunctionComponent = () => {
       </div>
       <div className="w-full lg:w-1/3 flex flex-col gap-8">
         <EventCalendar />
+        <Announcements />
       </div>
     </div>
   );
