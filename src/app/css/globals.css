@@ -28,3 +28,7 @@
   background-color: #122740 !important;
   color: #fff !important;
 }
+
+.rct-btn-group {
+  display: none !important;
+}
