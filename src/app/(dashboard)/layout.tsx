@@ -14,7 +14,7 @@ export default function DashboardLayout({
       <div className="dash-left">
         <Link href="/" className="logo">
           <Logo />
-          <span className="hidden lg:block">School</span>
+          <span className="hidden lg:block font-bold">School</span>
         </Link>
         <Sidebar />
       </div>
