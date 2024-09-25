@@ -2,6 +2,7 @@ import Link from "next/link";
 import "../css/dashboardLayout.css";
 import Logo from "../components/icon/Logo";
 import Sidebar from "../components/layout/Sidebar";
+import Navbar from "../components/layout/Navbar";
 
 export default function DashboardLayout({
   children,
@@ -9,7 +10,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="h-screen flex">
+    <div className="flex h-screen">
       <div className="dash-left">
         <Link href="/" className="logo">
           <Logo />
@@ -17,7 +18,10 @@ export default function DashboardLayout({
         </Link>
         <Sidebar />
       </div>
-      <div className="dash-right"> {children}</div>
+      <div className="dash-right">
+        <Navbar />
+        {children}
+      </div>
     </div>
   );
 }
