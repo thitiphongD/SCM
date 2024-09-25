@@ -1,6 +1,7 @@
 import AttendanceChart from "@/app/components/charts/AttendanceChart";
 import CountChart from "@/app/components/charts/CountChart";
 import FinanceChart from "@/app/components/charts/FinanceChart";
+import EventCalendar from "@/app/components/EventCalendar";
 import UserCard from "@/app/components/UserCard";
 import React from "react";
 
@@ -26,7 +27,9 @@ const AdminPage: React.FunctionComponent = () => {
           <FinanceChart />
         </div>
       </div>
-      <div className="w-full lg:w-1/3">R</div>
+      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        <EventCalendar />
+      </div>
     </div>
   );
 };
