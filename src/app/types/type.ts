@@ -21,3 +21,18 @@ export type StudentType = {
   address: string;
   photo: string;
 };
+
+export type ParentType = {
+  id: number;
+  name: string;
+  email?: string;
+  students: string[];
+  phone: string;
+  address: string;
+};
+
+export type SubjectType = {
+  id: number;
+  name: string;
+  teachers: string[];
+};
