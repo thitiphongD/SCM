@@ -1,25 +1,30 @@
 import React from "react";
-import { Teacher } from "../types/type";
 
-type Column = {
+// กำหนด Column type ให้ยืดหยุ่นสำหรับทุกๆ ชนิดข้อมูล
+type Column<T> = {
   header: string;
-  accessor: string;
+  accessor: keyof T | string;
   className?: string;
 };
 
-type Props = {
-  columns: Column[];
-  data: Teacher[];
-  renderRow: (item: Teacher) => React.ReactNode;
+// ใช้ Generics เพื่อทำให้ Table รองรับชนิดข้อมูลที่หลากหลาย
+type TableProps<T extends { id: number }> = {
+  columns: Column<T>[];
+  data: T[];
+  renderRow: (item: T) => React.ReactNode;
 };
 
-const Table: React.FC<Props> = ({ columns, data, renderRow }) => {
+const Table = <T extends { id: number }>({
+  columns,
+  data,
+  renderRow,
+}: TableProps<T>) => {
   return (
     <table className="w-full mt-4">
       <thead>
         <tr className="text-left text-gray-800">
           {columns.map((col) => (
-            <th key={col.accessor} className={col.className}>
+            <th key={col.accessor as string} className={col.className}>
               {col.header}
             </th>
           ))}

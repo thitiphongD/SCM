@@ -8,8 +8,8 @@ import {
 import Pagination from "@/app/components/Pagination";
 import Table from "@/app/components/Table";
 import TableSearch from "@/app/components/TableSearch";
-import { TeacherType } from "@/app/types/type";
-import { role, teachersData } from "@/lib/data";
+import { StudentType } from "@/app/types/type";
+import { role, studentsData } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -21,18 +21,13 @@ const columns = [
     className: "",
   },
   {
-    header: "Teacher ID",
-    accessor: "teacherId",
+    header: "Student ID",
+    accessor: "studentId",
     className: "hidden md:table-cell",
   },
   {
-    header: "Subjects",
-    accessor: "subjects",
-    className: "hidden md:table-cell",
-  },
-  {
-    header: "Classes",
-    accessor: "classes",
+    header: "Grade",
+    accessor: "grade",
     className: "hidden md:table-cell",
   },
   {
@@ -51,8 +46,8 @@ const columns = [
   },
 ];
 
-const ListTeacherPage = () => {
-  const renderRow = (item: TeacherType) => (
+const ListStudentPage = () => {
+  const renderRow = (item: StudentType) => (
     <tr
       key={item.id}
       className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-[#14919b] hover:text-white"
@@ -67,12 +62,11 @@ const ListTeacherPage = () => {
         />
         <div className="flex flex-col">
           <h3 className="font-semibold">{item.name}</h3>
-          <p className="text-xs">{item.email}</p>
+          <p className="text-xs">{item.class}</p>
         </div>
       </td>
-      <td className="hidden md:table-cell">{item.teacherId}</td>
-      <td className="hidden md:table-cell">{item.subjects.join(",")}</td>
-      <td className="hidden md:table-cell">{item.classes.join(",")}</td>
+      <td className="hidden md:table-cell">{item.studentId}</td>
+      <td className="hidden md:table-cell">{item.grade}</td>
       <td className="hidden md:table-cell">{item.phone}</td>
       <td className="hidden md:table-cell">{item.address}</td>
       <td>
@@ -95,7 +89,7 @@ const ListTeacherPage = () => {
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
       <div className="flex items-center justify-between">
-        <h1 className="hidden md:block text-lg font-semibold">All Teacher</h1>
+        <h1 className="hidden md:block text-lg font-semibold">All Students</h1>
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <TableSearch />
           <div className="flex items-center gap-4 self-end">
@@ -105,16 +99,18 @@ const ListTeacherPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-teal-600">
               <SortIcon />
             </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-teal-600">
-              <PlusIcon />
-            </button>
+            {role === "admin" && (
+              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-teal-600">
+                <PlusIcon />
+              </button>
+            )}
           </div>
         </div>
       </div>
-      <Table columns={columns} renderRow={renderRow} data={teachersData} />
+      <Table columns={columns} renderRow={renderRow} data={studentsData} />
       <Pagination />
     </div>
   );
 };
 
-export default ListTeacherPage;
+export default ListStudentPage;
