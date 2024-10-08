@@ -36,3 +36,18 @@ export type SubjectType = {
   name: string;
   teachers: string[];
 };
+
+export type ClassType = {
+  id: number;
+  name: string;
+  capacity: number;
+  grade: number;
+  supervisor: string;
+};
+
+export type LessonType = {
+  id: number;
+  subject: string;
+  class: string;
+  teacher: string;
+};

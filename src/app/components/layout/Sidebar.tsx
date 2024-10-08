@@ -46,25 +46,25 @@ const menuItems = [
       {
         icon: <ParentIcon />,
         label: "Parents",
-        href: "/parent",
+        href: "/list/parents",
         visible: ["admin", "teacher"],
       },
       {
         icon: <SubjectIcon />,
         label: "Subjects",
-        href: "/subject",
+        href: "/list/subjects",
         visible: ["admin"],
       },
       {
         icon: <ClassIcon />,
         label: "Classes",
-        href: "/class",
+        href: "/list/classes",
         visible: ["admin", "teacher"],
       },
       {
         icon: <LessonIcon />,
         label: "Lessons",
-        href: "/lesson",
+        href: "/list/lessons",
         visible: ["admin", "teacher"],
       },
       {
