@@ -2,8 +2,8 @@ import {
   FilterIcon,
   PlusIcon,
   SortIcon,
-  EyeIcon,
   BinIcon,
+  PenIcon,
 } from "@/app/components/icon/UtilIcon";
 import Pagination from "@/app/components/Pagination";
 import Table from "@/app/components/Table";
@@ -43,7 +43,7 @@ const ListClassPage = () => {
   const renderRow = (item: ClassType) => (
     <tr
       key={item.id}
-      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-[#14919b] hover:text-white"
+      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-teal-500 hover:text-white"
     >
       <td className="p-4">{item.name}</td>
       <td className="hidden md:table-cell">{item.capacity}</td>
@@ -52,8 +52,8 @@ const ListClassPage = () => {
       <td>
         <div className="flex items-center gap-2">
           <Link href={`/list/teacher/${item.id}`}>
-            <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0B6477]">
-              <EyeIcon />
+            <button className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-600">
+              <PenIcon />
             </button>
           </Link>
           {role === "admin" && (

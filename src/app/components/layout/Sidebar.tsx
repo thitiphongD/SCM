@@ -70,19 +70,19 @@ const menuItems = [
       {
         icon: <ExamIcon />,
         label: "Exams",
-        href: "/exam",
+        href: "/list/exams",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: <AssignmentIcon />,
         label: "Assignments",
-        href: "/assignment",
+        href: "/list/assignments",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: <ResultIcon />,
         label: "Results",
-        href: "/result",
+        href: "/list/results",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
@@ -94,7 +94,7 @@ const menuItems = [
       {
         icon: <CalendarIcon />,
         label: "Events",
-        href: "/events",
+        href: "/list/events",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
@@ -106,7 +106,7 @@ const menuItems = [
       {
         icon: <AnnouncementIcon />,
         label: "Announcements",
-        href: "/announcements",
+        href: "/list/announcements",
         visible: ["admin", "teacher", "student", "parent"],
       },
     ],
